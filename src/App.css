@@ -2,9 +2,15 @@
   text-align: center;
 }
 
-aside {
+.homeDisplay {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+/* aside {
   position: relative;
   display: flex;
   flex-direction: column;
   width: fit-content;
-}
+} */
