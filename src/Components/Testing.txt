@@ -1,0 +1,73 @@
+//*--= OG =--*\\
+    <section className='container'>
+    {/* lakjsdlfjal;sj */}
+    {pokeCards.map(pokemon => {
+        return (
+            <Link to={`/details/${pokemon.id}`} key={pokemon.id}>
+            <div className='pokemon'>
+                <div className='poke-details'>
+                    <h3>{pokemon.name}, {pokemon.rarity}</h3>
+                </div>
+                <div className='pokeFace'>
+                    <img src={pokemon.imageUrl} alt={pokemon.name}/>
+                </div>
+            </div>
+            </Link>
+        )
+    })}
+            
+    </section>
+
+//*--= ALT =--*\\
+
+        {
+        pokes !=undefined
+        ?
+        // {pokeCards.map(pokemon => {
+        // })}
+        //     return (
+        //         )
+                <Link to={`/details/${pokemon.id}`} key={pokemon.id}>
+                    <div className='pokemon'>
+                        <div className='poke-details'>
+                            <h3>{pokemon.name}, {pokemon.rarity}</h3>
+                        </div>
+                        <div className='pokeFace'>
+                            <img src={pokemon.imageUrl} alt={pokemon.name}/>
+                        </div>
+                    </div>
+                </Link>
+        :
+        null
+        }
+
+//*--= Differnt Await =--*\\
+
+async pokemonFetch() {
+
+    const [poke, setPoke] = useState([])
+
+    try {
+      const fecthPokemon = await fetch(`https://api.pokemontcg.io/v1/cards?setCode=base1`);
+      const json = await response.json();
+      this.setPoke({ poke: json });
+    } catch (error) {
+      console.log(error);
+    }
+    
+    useEffect(() => {
+        fecthPokemon()
+    }, []);
+}
+
+//*--= Sleep Function? =--*\\
+sleep(Time in ms).then(() => {
+//// code
+})
+
+--= OR =--
+const work = asynce () => {
+    await sleep(TIME IN MS)
+    // CODE STUFF
+}
+work()

@@ -1,40 +1,37 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 
 export default function BaseOne () {
-    function randNum(mx) {
-        return Math.floor(Math.random() * Math.floor(mx))
-    }
-    let cardNum = randNum(100)
-    const pokeUrl = "https://api.pokemontcg.io/v1/cards?setCode=base1"
-    const [poke, setPoke]= useState([])
-    const fecthPokemon = () => {
-        fetch(pokeUrl)
+    const [pokes, setPoke]= useState([])
+    const fecthPokemon = async() => {
+        await fetch("https://api.pokemontcg.io/v1/cards?setCode=base1")
         .then(res => res.json())
         .then(res => {
             setPoke(res)
         })
-        .catch(console.error("Whoopsie! Not a Pokemon!"));
+        // .catch(console.error());
     }
     useEffect(() => {
         fecthPokemon()
     }, []);
+
+    let pokeCards = pokes.cards
+    console.log(pokeCards)
+
     return (
 
             <section className='container'>
-                {poke.map(pokeCard => {
+                {pokeCards.map(pokemon => {
                     return (
-
-                        <Link to={`/cards/${cardNum}`} key={pokeCard.card.setCode}>
-                            <div className='card'>
-                                <div className='card-image'>
-                                    <img src={pokeCard.card.imageUrl} alt={pokeCard.card.name}/>
-                                </div>
-
+                        <div className='pokemon'>
+                            <div className='poke-details'>
+                                <h3>{pokemon.name}, {pokemon.rarity}</h3>
                             </div>
-                        </Link>
-                        
+                            <div className='pokeFace'>
+                                <img src={pokemon.imageUrl} alt={pokemon.name}/>
+                            </div>
+                        </div>
                     )
                 })}
             </section>

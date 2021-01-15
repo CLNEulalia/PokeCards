@@ -1,30 +1,57 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
-export default function BaseTwo () {
-    function randNum(mx) {
-        return Math.floor(Math.random() * Math.floor(mx))
-    }
-    let cardNum = randNum(62)
-    const pokeUrl = `https://api.pokemontcg.io/v1/cards/base2-${cardNum}`
-    const [poke, setPoke]= useState(null)
-    const fecthPokemon = () => {
-        fetch(pokeUrl)
+export default function BaseOne () {
+    const [pokes, setPokes]= useState([])
+    const fecthPokemon = async() => {
+        // try {
+        await fetch("https://api.pokemontcg.io/v1/cards?setCode=base2")
         .then(res => res.json())
         .then(res => {
-            setPoke(res)
+            setPokes(res)
         })
-        .catch(console.error("Whoopsie! Not a Pokemon!"));
+        // } catch {
+        //     console.log(console.error);
+        // }
     }
     useEffect(() => {
         fecthPokemon()
     }, []);
-    return (
-        poke !=null && (
-            <div className='container'>
-                <h4 className='cardName'>{poke.card.name}, {poke.card.rarity}</h4>
-                <img src={poke.card.imageUrl} alt={poke.card.name}></img>
-            </div>
+
+    let pokeCards = pokes.cards
+    console.log(pokeCards)
+    console.log(pokes)
+
+    {
+        pokes.length > 0 
+        ?
+        return (
+            // poke !=null ()
+            <section className='container'>
+    
+            {/* lakjsdlfjal;sj */}
+            if pokes.
+    
+            {pokes.map(pokemon => {
+                return (
+                    <Link to={`/details/${pokemon.id}`} key={pokemon.id}>
+                    <div className='pokemon'>
+                        <div className='poke-details'>
+                            <h3>{pokemon.name}, {pokemon.rarity}</h3>
+                        </div>
+                        <div className='pokeFace'>
+                            <img src={pokemon.imageUrl} alt={pokemon.name}/>
+                        </div>
+                    </div>
+                    </Link>
+                )
+            })}
+            </section>
         )
-    )
+        :
+        return null
+
+    }
+
 }

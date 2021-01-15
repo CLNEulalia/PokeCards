@@ -1,30 +1,40 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
+// import { Link } from 'react-router-dom';
 
 export default function BaseOne () {
-    function randNum(mx) {
-        return Math.floor(Math.random() * Math.floor(mx))
-    }
-    let cardNum = randNum(60)
-    const pokeUrl = `https://api.pokemontcg.io/v1/cards/base3-${cardNum}`
-    const [poke, setPoke]= useState(null)
-    const fecthPokemon = () => {
-        fetch(pokeUrl)
+    const [pokes, setPoke]= useState([])
+    const fecthPokemon = async() => {
+        await fetch("https://api.pokemontcg.io/v1/cards?setCode=base3")
         .then(res => res.json())
         .then(res => {
             setPoke(res)
         })
-        .catch(console.error("Whoopsie! Not a Pokemon!"));
+        .catch(console.error());
     }
     useEffect(() => {
         fecthPokemon()
     }, []);
+
+    let pokeCards = pokes.cards
+    console.log(pokeCards)
+
     return (
-        poke !=null && (
-            <div className='container'>
-                <h4 className='cardName'>{poke.card.name}, {poke.card.rarity}</h4>
-                <img src={poke.card.imageUrl} alt={poke.card.name}></img>
-            </div>
-        )
+
+            <section className='container'>
+                {pokeCards.map(pokemon => {
+                    return (
+                        <div className='pokemon'>
+                            <div className='poke-details'>
+                                <h3>{pokemon.name}, {pokemon.rarity}</h3>
+                            </div>
+                            <div className='pokeFace'>
+                                <img src={pokemon.imageUrl} alt={pokemon.name}/>
+                            </div>
+                        </div>
+                    )
+                })}
+            </section>
+
     )
 }
