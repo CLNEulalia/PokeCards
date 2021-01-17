@@ -10,8 +10,6 @@ export default function BaseOne () {
         .then(res => res.json())
         .then(res => {
             setPoke(res)
-            console.log(res)
-            console.log(Object.keys(res))
         })
     }
     useEffect(() => {
@@ -19,7 +17,6 @@ export default function BaseOne () {
     }, []);
 
     let pokeCards = poke.cards
-    console.log(pokeCards)
 
     return (
             <section className='container'>

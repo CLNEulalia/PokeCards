@@ -74,6 +74,8 @@ const work = asynce () => {
 }
 work()
 
+//*----= IT WORKS =----*\\
+
 {pokeCards && pokeCards.map(pokemon => {
     return (
         <div className='pokemon'>
@@ -86,3 +88,8 @@ work()
         </div>
     )
 })}
+
+
+//\\
+
+img.setNum === parseInt(match.params.setNum, 10))[0]
