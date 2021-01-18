@@ -89,7 +89,46 @@ work()
     )
 })}
 
+//*------= ROUTES =------*\\
 
-//\\
+<Route exact path='/base:id' render={BaseOne}></Route>
+<Route exact path='/base:id' render={BaseTwo}></Route>
+<Route exact path='/base:id' render={BaseThree}></Route>
+<Route exact path='/base:id' render={BaseFour}></Route>
+<Route exact path='/base:id' render={BaseFive}></Route>
+<Route exact path='/base:id' render={BaseSix}></Route>
 
+//*------= lol =------*\\
+// idk even know what this does lol
 img.setNum === parseInt(match.params.setNum, 10))[0]
+
+//*------= OG Home.jsx Export =------*\\
+
+export default function Home () {
+    return (
+        <section className='homeDisplay'>
+            {PokeData && PokeData.map((sets) => {
+                return (
+                    <div className='baseSetImg'>
+                            <Link to={`/base/${sets.setNum}`} key={sets.setNum}>
+                                <h1>Set {sets.setNum}</h1>
+                                <img src={sets.imgLink} alt='base set image' className='pokeCardBack'/>
+                            </Link>
+                    </div>
+                )
+            })}
+            <main>
+                <Switch>
+                <Route
+                    path="/details/:id"
+                    render={routerProps => (
+                        <BaseOne
+                        match={routerProps.match}
+                        />
+                    )}
+                />
+                </Switch>
+            </main>
+        </section>
+    )
+}

@@ -9,30 +9,30 @@
         "name": "Base Set Image 2",
         "setNum": "2",
         "imgLink": "https://i.redd.it/nwld3t4nsqc51.png",
-        "urlLink": "https://api.pokemontcg.io/v1/cards?setCode=base1"
+        "urlLink": "https://api.pokemontcg.io/v1/cards?setCode=base2"
     },
     {
         "name": "Base Set Image 3",
         "setNum": "3",
         "imgLink": "https://i.redd.it/nwld3t4nsqc51.png", 
-        "urlLink": "https://api.pokemontcg.io/v1/cards?setCode=base1"
+        "urlLink": "https://api.pokemontcg.io/v1/cards?setCode=base3"
     },
     {
         "name": "Base Set Image 4",
         "setNum": "4",
         "imgLink": "https://i.redd.it/nwld3t4nsqc51.png", 
-        "urlLink": "https://api.pokemontcg.io/v1/cards?setCode=base1"
+        "urlLink": "https://api.pokemontcg.io/v1/cards?setCode=base4"
     },
     {
         "name": "Base Set Image 5",
         "setNum": "5",
         "imgLink": "https://i.redd.it/nwld3t4nsqc51.png",
-        "urlLink": "https://api.pokemontcg.io/v1/cards?setCode=base1"
+        "urlLink": "https://api.pokemontcg.io/v1/cards?setCode=base5"
     },
     {
         "name": "Base Set Image 6",
         "setNum": "6",
         "imgLink": "https://i.redd.it/nwld3t4nsqc51.png",
-        "urlLink": "https://api.pokemontcg.io/v1/cards?setCode=base1"
+        "urlLink": "https://api.pokemontcg.io/v1/cards?setCode=base6"
     }
 ]

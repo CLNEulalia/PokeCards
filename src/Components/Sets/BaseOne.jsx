@@ -6,7 +6,7 @@ import { useState, useEffect } from 'react';
 export default function BaseOne () {
     const [poke, setPoke] = useState([])
     const fecthPokemon = async() => {
-        await fetch("https://api.pokemontcg.io/v1/cards?setCode=base1")
+        await fetch(`https://api.pokemontcg.io/v1/cards?setCode=base1`)
         .then(res => res.json())
         .then(res => {
             setPoke(res)
