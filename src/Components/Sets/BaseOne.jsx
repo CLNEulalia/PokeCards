@@ -1,6 +1,7 @@
 import React from 'react';
 import SpinToWin from '../SpinToWin'
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 // import { Link } from 'react-router-dom';
 
 export default function BaseOne () {
@@ -23,17 +24,18 @@ export default function BaseOne () {
                 {!pokeCards && <SpinToWin/>}
                 {pokeCards && pokeCards.map(pokemon => {
                     return (
-                        <div className='pokemon'>
-                            <div className='poke-details'>
-                                <h3>{pokemon.name}, {pokemon.rarity}</h3>
+                        <Link to={`/base/details/${pokemon.id}`}>
+                            <div className='pokemon' >
+                                <div className='poke-details'>
+                                    <h3>{pokemon.name}, {pokemon.rarity}</h3>
+                                </div>
+                                <div className='pokeFace'>
+                                    <img src={pokemon.imageUrl} alt={pokemon.name}/>
+                                </div>
                             </div>
-                            <div className='pokeFace'>
-                                <img src={pokemon.imageUrl} alt={pokemon.name}/>
-                            </div>
-                        </div>
+                        </Link>
                     )
                 })}
             </section>
-
     )
 }

@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
 
-export default function PokeDetails ({ match, params }) {
+export default function PokeDetails ({ match }) {
 
     const [poke, setPoke] = useState(null);
     const fectchPoke = async() => {
@@ -20,11 +20,10 @@ export default function PokeDetails ({ match, params }) {
     })
 
     return (
-        poke !=null && (
+        poke && (
             <div>
-                <h1>
-                    Oh Shoot oh snap
-                </h1>
+                <h3>{match.params.id}</h3>
+                <img src={poke.card.imageUrl} alt={poke.card.name}/>
             </div>
         )
     )
