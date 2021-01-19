@@ -4,6 +4,7 @@
 
 body {
   background-image: url('https://64.media.tumblr.com/4e732cea7bb5eed4680a844c55f6b59a/tumblr_poww2xdPUn1w3kah2_1280.png');
+  background-size: 235px 400px;
 }
 
 h2, h3 {
@@ -60,7 +61,7 @@ h2, h3 {
   margin: 8px;
   box-sizing: border-box;
   border: 80px solid rgb(0, 0, 0);
-  border-color: rgb(0, 195, 255) rgb(0, 195, 255) rgb(8, 228, 209) rgb(8, 228, 209);
+  border-color: rgb(253, 0, 0) rgb(253, 0, 0) rgb(255, 255, 255) rgb(255, 255, 255);
   animation: lds-hourglass 1.75s infinite;
 }
 @keyframes lds-hourglass {

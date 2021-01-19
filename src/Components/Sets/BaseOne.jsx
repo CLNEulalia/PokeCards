@@ -2,7 +2,6 @@ import React from 'react';
 import SpinToWin from '../SpinToWin'
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-// import { Link } from 'react-router-dom';
 
 export default function BaseOne () {
     const [poke, setPoke] = useState([])
@@ -20,22 +19,22 @@ export default function BaseOne () {
     let pokeCards = poke.cards
 
     return (
-            <section className='container'>
-                {!pokeCards && <SpinToWin/>}
-                {pokeCards && pokeCards.map(pokemon => {
-                    return (
-                        <Link to={`/base/details/${pokemon.id}`}>
-                            <div className='pokemon' >
-                                <div className='poke-details'>
-                                    <h3>{pokemon.name}, {pokemon.rarity}</h3>
-                                </div>
-                                <div className='pokeFace'>
-                                    <img src={pokemon.imageUrl} alt={pokemon.name}/>
-                                </div>
+        <section className='container'>
+            {!pokeCards && <SpinToWin/>}
+            {pokeCards && pokeCards.map(pokemon => {
+                return (
+                    <Link to={`/base/details/${pokemon.id}`}>
+                        <div className='pokemon' >
+                            <div className='poke-details'>
+                                <h3>{pokemon.name}, {pokemon.rarity}</h3>
                             </div>
-                        </Link>
-                    )
-                })}
-            </section>
+                            <div className='pokeFace'>
+                                <img src={pokemon.imageUrl} alt={pokemon.name}/>
+                            </div>
+                        </div>
+                    </Link>
+                )
+            })}
+        </section>
     )
 }
