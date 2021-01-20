@@ -1,0 +1,21 @@
+.navLink {
+  text-decoration: none;
+}
+
+.navBlock{
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+}
+
+.navDisplay {
+    max-width: 2rem;
+    max-height: 2rem;
+}
+
+.navInfo {
+  font-family: 'Bungee', cursive;
+  font-weight: bold;
+  margin-top: 0%;
+  margin-bottom: 0%;
+}

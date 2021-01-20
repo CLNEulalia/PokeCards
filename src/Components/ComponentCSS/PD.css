@@ -1,0 +1,27 @@
+.cardBlock {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    margin-top: 2rem;
+}
+
+.card {
+  margin-right: 3rem;
+}
+
+.cardInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 50%;
+    text-align: center;
+}
+
+.action-head {
+  margin-bottom: 0%;
+}
+
+.action-main {
+  margin-top: 0%;
+}

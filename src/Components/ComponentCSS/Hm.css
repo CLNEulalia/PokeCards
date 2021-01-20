@@ -1,0 +1,31 @@
+.tcg-logo-pos {
+  display: flex;
+  justify-content: center;
+}
+
+.tcg-logo {
+  max-width: 50%;
+  max-width: 25%;
+}
+
+.homeDisplay {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.pokeCardBack {
+  max-width: 75%;
+  max-height: 100%;
+}
+
+.base-deck {
+    text-decoration: none;
+    text-align: center;
+    font-family: 'Bungee', cursive;
+}
+
+.set-deck {
+  margin-top: 0%;
+  margin-bottom: 0%;
+}

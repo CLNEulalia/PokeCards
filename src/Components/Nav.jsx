@@ -1,31 +1,28 @@
-import React, { useState } from 'react';
+import React from 'react';
+import './ComponentCSS/Nv.css'
 import { Link } from 'react-router-dom';
 
 
 export default function Nav () {
-    const [searchState, setSearchState] = useState('');
-
-    const searchChange = (event) => {
-        setSearchState({ ...searchState, [event.target.value]: event.target.name});
-    }
-    const searchSubmit = (event) => {
-        event.preventDefault()
-        setSearchState({ ...searchState, [event.target.name]: event.target.value});
-    }
 
     return (
         <div>
             <nav>
-                <Link to='/' className='homeButt'>Home</Link>
+                <Link to='/' className='navLink'>
+                    <div className='navBlock'>
+                        <div>
+                            <img
+                                src='https://icons-for-free.com/iconfiles/png/512/Pokeballs-1320568182055361827.png'
+                                alt='pokeCard'
+                                className='navDisplay'
+                                />
+                        </div>
+                        <div>
+                            <h4 className='navInfo'>Pokémon Sets</h4>
+                        </div>
+                    </div>
+                </Link>
             </nav>
-            <input
-                type='text'
-                name='searchState'
-                className='searchBar'
-                id='search'
-                onChange={searchChange}
-                value={searchSubmit.value}
-            />
         </div>
     )
 }

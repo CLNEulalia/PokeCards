@@ -1,27 +1,11 @@
-.App {
-  text-align: center;
-}
-
-/* body {
+body {
   background-image: url('https://64.media.tumblr.com/4e732cea7bb5eed4680a844c55f6b59a/tumblr_poww2xdPUn1w3kah2_1280.png');
   background-size: 235px 400px;
-} */
-
-h2, h3, h4 {
-  color: black;
 }
 
-.homeDisplay {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
-
-.details-container {
-  align-items: center;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+h2, h3, h4, p {
+  color: gold;
+  margin-bottom: 0%;
 }
 
 .container {
@@ -34,38 +18,18 @@ h2, h3, h4 {
   padding: 1rem;
 }
 
-.pokeCardBack {
-  max-width: 75%;
-  max-height: 100%;
+.poke-details {
+  text-align: center;
+  font-family: 'Bungee', cursive;
 }
 
-.baseSetImg {
+.pokeName {
+  text-decoration: none;
+}
+
+.pokeFace {
   display: flex;
   flex-direction: row;
-}
-
-.lds-hourglass {
-  display: inline-block;
-  position: relative;
-  width: 80px;
-  height: 80px;
-}
-
-
-.lds-hourglass:after {
-  content: " ";
-  display: block;
-  border-radius: 100%;
-  width: 0;
-  height: 0;
-  margin: 8px;
-  box-sizing: border-box;
-  border: 80px solid rgb(0, 0, 0);
-  border-color: rgb(253, 0, 0) rgb(253, 0, 0) rgb(255, 255, 255) rgb(255, 255, 255);
-  animation: lds-hourglass 1.75s infinite;
-}
-@keyframes lds-hourglass {
-  100% {
-    transform: rotate(360deg);
-  }
+  justify-content: center;
+  align-content: center;
 }

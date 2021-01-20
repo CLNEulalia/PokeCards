@@ -1,4 +1,5 @@
 import React from 'react';
+import './ComponentCSS/PD.css';
 import { useState, useEffect } from 'react';
 
 export default function PokeDetails ({ match }) {
@@ -22,35 +23,48 @@ export default function PokeDetails ({ match }) {
     if (poke && poke.card.supertype === "Pokémon") {
         return (
             poke && (
-            <div>
-                <img src={poke.card.imageUrl} alt={poke.card.name}/>
-                <h3>{poke.card.name}</h3>
-                <h3>{poke.card.supertype}</h3>
-                <h3>HP = {poke.card.hp}</h3>
-                <h3>{poke && poke.card.attacks[0].name}</h3>
-                <h4>{poke && poke.card.attacks[0].text}</h4>
-                <h3>{poke && poke.card.attacks[1].name}</h3>
-                <h4>{poke && poke.card.attacks[1].text}</h4>
-            </div>
+                <div className='cardBlock'>
+                    <div className ='cardDisplay'>
+                        <img src={poke.card.imageUrl} alt={poke.card.name} className='card'/>
+                    </div>
+                    <div className='cardInfo'>
+                        <h2 className='action-head'>{poke.card.name} ({poke.card.types[0]} Type), HP = {poke.card.hp}</h2>
+                        <p className='action-main'>Artist: {poke.card.artist}</p>
+                        <h3 className='action-head'> Attack 1: {poke && poke.card.attacks[0].name}</h3>
+                        <p className='action-main'>{poke && poke.card.attacks[0].text}</p>
+                        <h3 className='action-head'> Attack 2: {poke && poke.card.attacks[1].name}</h3>
+                        <p className='action-main'>{poke && poke.card.attacks[1].text}</p>
+                    </div>
+                </div>
             )
         )
     } else if (poke && poke.card.supertype === "Trainer") {
         return (
             poke && (
-            <div>
-                <img src={poke.card.imageUrl} alt={poke.card.name}/>
-                <h3>Trainer Type : {poke.card.name}, {poke.card.rarity}</h3>
-                <p>Action: {poke.card.text[0].text}</p>
-            </div>
+                <div className='cardBlock'>
+                    <div className ='cardDisplay'>
+                        <img src={poke.card.imageUrl} alt={poke.card.name} className='card'/>
+                    </div>
+                    <div className='cardInfo'>
+                        <h3>Type : {poke.card.name}, {poke.card.rarity}</h3>
+                        <h3 className='action-head'>Action:</h3>
+                        <p className='action-main'>{poke.card.text[0]}</p>
+                    </div>
+                </div>
             )
         )
     } else if (poke && poke.card.supertype === "Energy") {
         return (
             poke && (
-            <div>
-                <img src={poke.card.imageUrl} alt={poke.card.name}/>
-                <h3>Energy Type : {poke.card.name}</h3>
-            </div>
+                <div className='cardBlock'>
+                    <div className ='cardDisplay'>
+                        <img src={poke.card.imageUrl} alt={poke.card.name} className='card'/>
+                    </div>
+                    <div className='cardInfo'>
+                        <h3>Type : {poke.card.name}, {poke.card.rarity}</h3>
+                        <p className='action-main'>Artist: {poke.card.artist}</p>
+                    </div>
+                </div>
             )
         )
     } else {
