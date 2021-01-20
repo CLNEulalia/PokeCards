@@ -7,7 +7,7 @@ export default function BaseOne () {
     const [poke, setPoke] = useState([])
     const fecthPokemon = async() => {
         await fetch(`https://api.pokemontcg.io/v1/cards?setCode=base1`)
-        .then(res => res.json())
+        .then(res => res.json()) //".try" ==> is good, else, ".catch('loading, being throttled')"
         .then(res => {
             setPoke(res)
         })

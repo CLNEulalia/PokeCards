@@ -19,3 +19,8 @@
   margin-top: 0%;
   margin-bottom: 0%;
 }
+
+.action-head, .action-main {
+  color: white;
+  opacity: 1;
+}

@@ -20,7 +20,7 @@ export default function PokeDetails ({ match }) {
         fectchPoke()
     })
     
-    if (poke && poke.card.supertype === "Pokémon") {
+    if (poke && poke.card.supertype === "Pokémon" && poke.card.attacks.length === 1) {
         return (
             poke && (
                 <div className='cardBlock'>
@@ -28,7 +28,25 @@ export default function PokeDetails ({ match }) {
                         <img src={poke.card.imageUrl} alt={poke.card.name} className='card'/>
                     </div>
                     <div className='cardInfo'>
-                        <h2 className='action-head'>{poke.card.name} ({poke.card.types[0]} Type), HP = {poke.card.hp}</h2>
+                        <h2 className='action-head'>{poke && poke.card.name} ({poke.card.types[0]} Type), HP = {poke.card.hp}</h2>
+                        <p className='action-main'>Artist: {poke.card.artist}</p>
+                        <h3 className='action-head'> Attack 1: {poke && poke.card.attacks[0].name}</h3>
+                        <p className='action-main'>{poke && poke.card.attacks[0].text}</p>
+                        {/* <h3 className='action-head'> Attack 2: {poke && poke.card.attacks[1].name}</h3>
+                        <p className='action-main'>{poke && poke.card.attacks[1].text}</p> */}
+                    </div>
+                </div>
+            )
+        )
+    } else if (poke && poke.card.supertype === "Pokémon" && poke.card.attacks.length > 1) {
+        return (
+            poke && (
+                <div className='cardBlock'>
+                    <div className ='cardDisplay'>
+                        <img src={poke.card.imageUrl} alt={poke.card.name} className='card'/>
+                    </div>
+                    <div className='cardInfo'>
+                        <h2 className='action-head'>{poke && poke.card.name} ({poke.card.types[0]} Type), HP = {poke.card.hp}</h2>
                         <p className='action-main'>Artist: {poke.card.artist}</p>
                         <h3 className='action-head'> Attack 1: {poke && poke.card.attacks[0].name}</h3>
                         <p className='action-main'>{poke && poke.card.attacks[0].text}</p>
