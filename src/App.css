@@ -2,13 +2,13 @@
   text-align: center;
 }
 
-body {
+/* body {
   background-image: url('https://64.media.tumblr.com/4e732cea7bb5eed4680a844c55f6b59a/tumblr_poww2xdPUn1w3kah2_1280.png');
   background-size: 235px 400px;
-}
+} */
 
-h2, h3 {
-  color: White;
+h2, h3, h4 {
+  color: black;
 }
 
 .homeDisplay {
