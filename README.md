@@ -7,7 +7,7 @@
 Welcome to **Pokémon Card Collection**! This web-app is an homage to the cards used in the **Pokémon Trading Card Game**(PokémonTCG) released in Japan, 1996, and in the US, 1998. The web-app itself was developed by **Joachim Cañete**, a student in General Assembly's Software Engineering Immersive program, Cohort SEI: 1130.
 
 ## About
-**Pokémon Card Collection** was built through `React` and incorporates the usage of `JavaScript` and `CSS`. Through `React`, a variety of components were built to render **6 decks** - each deck displaying their respective collection of cards, upon which the user can select a single card to read more information on them. You can view the **Pokémon Card Collection** [HERE](pokemon-card-collection.surge.sh)!
+**Pokémon Card Collection** was built through `React` and incorporates the usage of `JavaScript` and `CSS`. Through `React`, a variety of components were built to render **6 decks** - each deck displaying their respective collection of cards, upon which the user can select a single card to read more information on them. You can view the **Pokémon Card Collection** [HERE](http://pokemon-card-collection.surge.sh/)!
 
 ## Deployment
 **Pokémon Card Collection** was deployed through [Surge](https://surge.sh/), a publishing platform for static web-apps.
