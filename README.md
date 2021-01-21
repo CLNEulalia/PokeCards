@@ -1,70 +1,43 @@
-# Getting Started with Create React App
+# GA-SEI-Project-Two
+## Pokémon Card Collection
+#### SEI: 1130, Project Two
+#### Joachim Cañete
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Welcome
+Welcome to **Pokémon Card Collection**! This web-app is an homage to the cards used in the **Pokémon Trading Card Game**(PokémonTCG) released in Japan, 1996, and in the US, 1998. The web-app itself was developed by **Joachim Cañete**, a student in General Assembly's Software Engineering Immersive program, Cohort SEI: 1130.
 
-## Available Scripts
+## About
+**Pokémon Card Collection** was built through `React` and incorporates the usage of `JavaScript` and `CSS`. Through `React`, a variety of components were built to render **6 decks** - each deck displaying their respective collection of cards, upon which the user can select a single card to read more information on them. You can view the **Pokémon Card Collection** [HERE]()!
 
-In the project directory, you can run:
+## Deployment
+**Pokémon Card Collection** was deployed through [Surge](https://surge.sh/), a publishing platform for static web-apps.
 
-### `yarn start`
+## Interaction
+Upon entering the initial link for **Pokémon Card Collection**, the user will be presented with the homepage which features 6 decks, each titled as *Sets*. The original *Base Set* of the PokémonTCG received additions after its initial release. These additions varied between different card styles, new support cards, and new pokémon types (e.g. Dark Pokémon).
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+![PokemonCC]()
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+When the user selects one of the *sets*, they will be routed to the card collection of that that *set*.
 
-### `yarn test`
+![]()
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+From there the user may select any one of the cards to view more information on that specific card. These actions are applicable across all 6 *sets*.
 
-### `yarn build`
+![]()
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Development
+Through the use of the [PokémonTCG API](https://pokemontcg.io/) Development of **Pokémon Card Collection** started with mapping of a component hierarchy. Based on this structure, I had a clear idea of how I could import and link my various components. Through my own investigations into the API, I was able to learn about the various decks released throughout history, and the number of sets released in the PokémonTCG **Base Set**. With a strong idea of how I wanted to structure the web-app, I proceeded to set up the *sets* as they were stacked 'decks' on a table that could be entered into and spread out for further investigation.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+![]()
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## User Stories
+> As a user, I would like to choose what deck of cards I'd like to see more of
+>
+> As a user, I would like to be able to read more information about a specific card and its respective content
+>
+> As a user, I would like to be able to learn more about the history of the Pokémon TCG
+>
+> As a user, I would like to get back to the homepage
 
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Bugs
+There is only one known bug, where the API call will occasionally be throttled. This may in part be due to the request limit of 5000 requests per hour. While that may seem like a tall order to exceed, the structuring of my fetch calls spread over 6 different sets certainly attempts to breach the request limit.
