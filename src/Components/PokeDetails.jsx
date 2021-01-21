@@ -32,8 +32,6 @@ export default function PokeDetails ({ match }) {
                         <p className='action-main'>Artist: {poke.card.artist}</p>
                         <h3 className='action-head'> Attack 1: {poke && poke.card.attacks[0].name}</h3>
                         <p className='action-main'>{poke && poke.card.attacks[0].text}</p>
-                        {/* <h3 className='action-head'> Attack 2: {poke && poke.card.attacks[1].name}</h3>
-                        <p className='action-main'>{poke && poke.card.attacks[1].text}</p> */}
                     </div>
                 </div>
             )
@@ -90,13 +88,4 @@ export default function PokeDetails ({ match }) {
             <h1>Card Not Found</h1>
         )
     }
-
 }
-/*
-CONDITIONAL RENDERING
-set contants for 3 different view states of each superType:
--Pokemon
--Trainer
--Energy
-build tenerary operator to conditionally render based on superType
-*/

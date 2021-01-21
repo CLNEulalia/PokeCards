@@ -22,24 +22,22 @@ export default function BaseOne () {
     console.log(pokeCards)
 
     return (
-
-            <section className='container'>
+        <section className='container'>
             {!pokeCards && <SpinToWin/>}
-                {pokeCards && pokeCards.map(pokemon => {
-                    return (
-                        <Link to={`/base/details/${pokemon.id}`} className ='pokeName'>
-                            <div className='pokemon'>
-                                <div className='poke-details'>
-                                    <h3>{pokemon.name}</h3>
-                                </div>
-                                <div className='pokeFace'>
-                                    <img src={pokemon.imageUrl} alt={pokemon.name}/>
-                                </div>
+            {pokeCards && pokeCards.map(pokemon => {
+                return (
+                    <Link to={`/base/details/${pokemon.id}`} className ='pokeName'>
+                        <div className='pokemon'>
+                            <div className='poke-details'>
+                                <h3>{pokemon.name}</h3>
                             </div>
-                        </Link>
-                    )
-                })}
-            </section>
-
+                            <div className='pokeFace'>
+                                <img src={pokemon.imageUrl} alt={pokemon.name}/>
+                            </div>
+                        </div>
+                    </Link>
+                )
+            })}
+        </section>
     )
 }
